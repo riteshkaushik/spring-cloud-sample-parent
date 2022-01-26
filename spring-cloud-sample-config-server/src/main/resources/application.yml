@@ -1,0 +1,27 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: CONFIG-SERVER-SAMPLE
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/riteshkaushik/config-server-sample-repo.git
+          clone-on-start: true
+  security:
+    user:
+      name: root
+      password: admin
+
+encrypt:
+  keyStore:
+    location: classpath:/config-server.jks
+    password: <password>
+    alias: config-server-key
+    secret: <secret>
+
+
+# keytool -genkeypair -alias config-server-key -keyalg RSA -keysize 4096
+# -sigalg SHA512withRSA -keypass <secret> -keystore config-server.jks -storepass <password>

@@ -7,6 +7,7 @@
         <module>spring-cloud-sample-gateway</module>
         <module>spring-cloud-order-service</module>
         <module>spring-cloud-customer-service</module>
+        <module>spring-cloud-sample-config-server</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
